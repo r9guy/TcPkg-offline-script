@@ -1,3 +1,10 @@
+$dir =  "C:\packagesoffline"
+
+# Create the folder is the path doesn't exist
+If (-not(test-path -Path $dir)) {
+    New-Item  -ItemType Directory -Path $dir
+}
+
 # tcpkg download TC1300.Cpp.XAE 1.0.1  -o "C:\packagesoffline"
 # tcpkg download TC170x.UsermodeRuntime.XAR  -o "C:\packagesoffline"
 # tcpkg download TE1120.XCADInterface.XAE -o "C:\packagesoffline"
